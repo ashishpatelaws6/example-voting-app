@@ -16,8 +16,8 @@ pipeline{
         stage("Deploy"){
             steps{
                 sh '''
-                kubectl  set image deployment vote vote=796973483974.dkr.ecr.ap-south-1.amazonaws.com/ap-ecr:vote-v${BUILD_NUMBER}
-                kubectl rollout restart deployment vote
+                    kubectl  set image deployment vote vote=796973483974.dkr.ecr.ap-south-1.amazonaws.com/ap-ecr:vote-v${BUILD_NUMBER}
+                    kubectl rollout restart deployment vote
                 '''
             }
         }
